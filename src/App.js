@@ -13,17 +13,9 @@ import useFetch from './services/getLocation';
 const App = () => {
   const [location, setLocation] = useState('london')
 
-  const { data, loading, error } = useFetch(location);
+  const { data, loading, error } = useFetch(location,null,'query');
 
-  const getGeo = () => {
-    if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition((position) =>{
-        
-        console.log(position.coords);
-        setLocation("caracas");
-      })
-    }
-  }
+ 
 
   return (
     <CurrentLocationContext.Provider value={data}>

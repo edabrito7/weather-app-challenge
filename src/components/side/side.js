@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 
+import TopSide from '../top-side/top-side';
+
 import './side.css'
 
 import CurrentLocationContext from '../../context/current-location/current-location.context';
@@ -11,7 +13,7 @@ const Side = () => {
     const { title } = location;
     return(
         <div className='side-bar-container'>
-            <div>Container</div>
+            <TopSide/>
             <h1 className='side-bar-temperature white'>15</h1>
             <h2 className='side-bar-weather'>Shower</h2>
             <div className='date-info-container'>
