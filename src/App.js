@@ -7,7 +7,7 @@ import MainInfo from './components/main-info/main-info';
 
 import CurrentLocationContext from './context/current-location/current-location.context';
 
-import useFetch from './services/getLocation';
+import useFetch from './services/getLocationbyQuery';
 
 
 const App = () => {
@@ -15,7 +15,6 @@ const App = () => {
 
   const { data, loading, error } = useFetch(location,null,'query');
 
- 
 
   return (
     <CurrentLocationContext.Provider value={data}>

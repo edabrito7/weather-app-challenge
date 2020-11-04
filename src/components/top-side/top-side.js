@@ -4,7 +4,7 @@ import SearchButton from '../search-button/search-button';
 
 import './top-side.css';
 
-import useFetch from '../../services/getLatLong';
+import useFetch from '../../services/getLocationByLatLong';
 
 const TopSide = () => {
     const [location, setLocation] = useState(null)
