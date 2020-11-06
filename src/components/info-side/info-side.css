@@ -1,0 +1,43 @@
+.white {
+    color: white;
+}
+
+.grey {
+    color: #88869D;
+}
+
+
+.side-bar-temperature {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    
+}
+
+
+.side-bar-weather {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #A09FB1;
+}
+
+.date-info-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+.date {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1.5rem;
+}
+
+.city {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

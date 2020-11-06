@@ -10,7 +10,6 @@ const TopSide = () => {
     const [location, setLocation] = useState(null)
 
     const { data, loading, error} = useFetch(location);
-    console.log(data);
 
     const getGeo = () => {
         if ('geolocation' in navigator) {

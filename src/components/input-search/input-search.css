@@ -1,0 +1,36 @@
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    border: 1px solid #E7E7EB; 
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+}
+
+.icon {
+    color: #616475;
+    padding: 0rem 0.5rem;
+}
+
+
+.input {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #1E213A;
+    height: 48px;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 80%;
+    color: white;
+}
+
+.label {
+    display: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #616475;
+    opacity: 1; /* Firefox */
+  }
