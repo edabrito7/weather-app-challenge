@@ -4,13 +4,12 @@ import SearchButton from '../search-button/search-button';
 
 import './top-side.css';
 
-import useFetch from '../../services/getLocationByLatLong';
+import useFetch from '../../services/searchLocation';
 
 const TopSide = () => {
-    const [location, setLocation] = useState(null)
+    const [location, setLocation] = useState([])
 
-    const { data, loading, error} = useFetch(location);
-
+    const { data, loading, error} = useFetch(`search/?lattlong=${location[0]},${location[1]}`);
     const getGeo = () => {
         if ('geolocation' in navigator) {
           navigator.geolocation.getCurrentPosition((position) =>{

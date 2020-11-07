@@ -12,15 +12,11 @@ export default function useFetch(query,init) {
 
 
     useEffect(() => {
-
-        if(query === null) return;
         if (prevUrl.current === query && prevInit.current === query) return;
         prevUrl.current = query;
         prevInit.current = init;
 
-
-
-        api.get(`search/?lattlong=${query[0]},${query[1]}`)
+        api.get(query)
         .then(response => {
             if (response.status === 200) return response;
             return setError(response);

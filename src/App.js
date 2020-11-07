@@ -7,13 +7,13 @@ import MainInfo from './components/main-info/main-info';
 
 import CurrentLocationContext from './context/current-location/current-location.context';
 
-import useFetch from './services/getLocationbyQuery';
+import useFetch from './services/searchLocation';
 
 
 const App = () => {
   const [location, setLocation] = useState('london')
 
-  const { data, loading, error } = useFetch(location,null,'query');
+  const { data, loading, error } = useFetch(`search/?query=${location}`,null);
 
 
   return (
