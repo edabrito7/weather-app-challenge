@@ -3,25 +3,29 @@ import api from './api';
 
 
 
-export default function useFetch(query,init) {
+export default function useFetch(query) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const prevInit = useRef();
     const prevUrl = useRef();
 
 
     useEffect(() => {
-        if (prevUrl.current === query && prevInit.current === query) return;
+        if (prevUrl.current === query) return;
         prevUrl.current = query;
-        prevInit.current = init;
 
         api.get(query)
         .then(response => {
             if (response.status === 200) return response;
             return setError(response);
         })
-        .then(data => setData(data.data[0]))
+        .then((data) => {
+            if (data.data?.consolidated_weather) {
+                return setData(data.data)
+            } else {
+                setData(data.data[0])
+            }
+        })
         .catch(err => {
             console.log(err);
             setError(err);
@@ -29,7 +33,7 @@ export default function useFetch(query,init) {
         .finally(() => setLoading(false))
 
         
-    },[query,init])
+    },[query])
 
     return { data, loading, error };
     
