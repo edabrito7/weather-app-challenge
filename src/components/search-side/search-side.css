@@ -2,3 +2,13 @@
     height: 100%;
     position: relative;
 }
+
+
+.close {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 0.65rem;
+    right: 2.5rem;
+    font-size: 36px;
+}

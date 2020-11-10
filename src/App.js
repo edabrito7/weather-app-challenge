@@ -19,7 +19,8 @@ const App = () => {
     error: searchError 
     } = useFetch(`search/?query=${location}`);
   
-    const id = searchData?.woeid || '44418'
+  const id = searchData?.woeid || '44418'
+  
   const {
     data: locationData,
     loading: locationLoading,

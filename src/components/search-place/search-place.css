@@ -1,0 +1,12 @@
+.search-place-button {
+    background-color: #3C47E9;
+    font-size: 16px;
+    font-weight: 600;
+    color: #E7E7EB;
+    position: absolute;
+    right: 3rem;
+    top: 4rem;
+    height: 50px;
+    width: 86px;
+    border: none;
+}
