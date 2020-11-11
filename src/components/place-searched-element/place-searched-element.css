@@ -1,0 +1,10 @@
+.place-searched-element-container {
+    border: 1px solid #616475;
+    box-sizing: border-box; 
+    height: 4rem;
+    width: 100%;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    color: white;
+}

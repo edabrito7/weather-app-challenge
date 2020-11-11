@@ -4,6 +4,7 @@ import SearchButtonContext from '../../context/search/search-button.context';
 
 import InputSearch from '../input-search/input-search';
 import SearchPlace from '../search-place/search-place';
+import PlacesSearchedList from '../places-searched-list/places-searched-list';
 
 import './search-side.css';
 
@@ -17,6 +18,7 @@ const SearchSide = () => {
             >close</i>
             <InputSearch/>
             <SearchPlace/>
+            <PlacesSearchedList/>
         </div>
     )
 }
