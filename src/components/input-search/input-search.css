@@ -34,3 +34,11 @@
     color: #616475;
     opacity: 1; /* Firefox */
   }
+
+
+@media screen and (max-width: 1400px) {
+
+    .input-container{
+        width: 50%;
+    }
+}
