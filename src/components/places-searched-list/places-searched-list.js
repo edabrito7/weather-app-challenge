@@ -8,7 +8,12 @@ import './places-searched-list.css';
 const PlacesSearchedList = () => {
     return(
         <ul className='places-searched-list-container'>
-            <PlaceSearchElement/>
+            <PlaceSearchElement
+            city="Santiago de Chile"
+            />
+            <PlaceSearchElement
+            city="Panama"
+            />
         </ul>
     )
 }

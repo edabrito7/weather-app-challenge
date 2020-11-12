@@ -1,10 +1,28 @@
 .place-searched-element-container {
-    border: 1px solid #616475;
+    border: 1px solid #1E213A;
     box-sizing: border-box; 
     height: 4rem;
     width: 100%;
     cursor: pointer;
     list-style: none;
-    text-align: center;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+    margin-top: 2rem;
+}
+
+
+.place-searched-arrow {
+    color: #616475;
+}
+
+li:hover{
+
+    border: 1px solid #616475;
+}
+
+li:first-of-type {
+    margin-top: 0rem;
 }
