@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import PlacesSearchedContext from '../../context/places-searched/places-searched.context';
+import { PlacesSearchedContext } from '../../context/places-searched/places-searched.provider';
 
 import PlaceSearchedElement from '../place-searched-element/place-searched-element';
 

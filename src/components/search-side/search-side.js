@@ -1,6 +1,7 @@
-import React, {  useContext } from 'react';
+import React, {  useState, useContext } from 'react';
 
 import SearchButtonContext from '../../context/search/search-button.context';
+import SearchProvider from '../../context/places-searched/places-searched.provider';
 
 import InputSearch from '../input-search/input-search';
 import SearchPlace from '../search-place/search-place';
@@ -9,9 +10,11 @@ import PlacesSearchedList from '../places-searched-list/places-searched-list';
 import './search-side.css';
 
 const SearchSide = () => {
+
     const { toggleSearchButton } = useContext(SearchButtonContext);
     return(
-        <div className='search-side-container'>
+        <SearchProvider>
+            <div className='search-side-container'>
             <i 
             onClick={toggleSearchButton}
             className="material-icons md-48 close"
@@ -19,7 +22,8 @@ const SearchSide = () => {
             <InputSearch/>
             <SearchPlace/>
             <PlacesSearchedList/>
-        </div>
+            </div>
+        </SearchProvider>
     )
 }
 
