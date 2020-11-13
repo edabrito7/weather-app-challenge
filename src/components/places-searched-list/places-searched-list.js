@@ -1,19 +1,22 @@
-import React from 'react';
-import PlaceSearchElement from '../place-searched-element/place-searched-element';
+import React, { useContext } from 'react';
+
+import PlacesSearchedContext from '../../context/places-searched/places-searched.context';
 
 import PlaceSearchedElement from '../place-searched-element/place-searched-element';
 
 import './places-searched-list.css';
 
 const PlacesSearchedList = () => {
+    const places = useContext(PlacesSearchedContext);
+    const { value } = places;
+
+    const PlacesMapping = value.map((place,id) => {
+
+        return <PlaceSearchedElement key={id} city={place}/>
+    })
     return(
         <ul className='places-searched-list-container'>
-            <PlaceSearchElement
-            city="Santiago de Chile"
-            />
-            <PlaceSearchElement
-            city="Panama"
-            />
+            {PlacesMapping}
         </ul>
     )
 }
