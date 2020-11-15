@@ -1,0 +1,81 @@
+.day-card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1E213A;
+    width: 120px;
+    height: 177px;
+}
+
+.day-card-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 65px;
+    margin: 0.75rem 0rem;
+}
+
+
+.s {
+    background-image: url('../../assets/weather-pitures/Shower.png');
+}
+
+.c {
+    background-image: url('../../assets/weather-pitures/Clear.png');
+}
+
+.sn {
+    background-image: url('../../assets/weather-pitures/Snow.png');
+}
+
+.t {
+    background-image: url('../../assets/weather-pitures/Thunderstorm.png');
+}
+
+.sl {
+    background-image: url('../../assets/weather-pitures/Sleet.png');
+}
+
+.h {
+    background-image: url('../../assets/weather-pitures/Hail.png');
+}
+
+.hr {
+    background-image: url('../../assets/weather-pitures/HeavyRain.png');
+}
+
+.lr {
+    background-image: url('../../assets/weather-pitures/LightRain.png');
+}
+
+.hc {
+    background-image: url('../../assets/weather-pitures/HeavyCloud.png');
+}
+
+.lc {
+    background-image: url('../../assets/weather-pitures/LightCloud.png');
+}
+.day-card-date {
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 18px 0rem 0rem 0rem;
+}
+
+.day-card-temperature-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 2rem;
+}
+
+.day-card-temperature {
+    margin: 0rem 0.5rem ;
+}
+
+.white {
+    color: #E7E7EB;
+}
+
+.grey {
+    color: #A09FB1;
+}
