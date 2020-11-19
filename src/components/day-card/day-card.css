@@ -4,7 +4,7 @@
     background-color: #1E213A;
     width: 120px;
     height: 177px;
-    margin: 1rem 0.825rem;
+    margin-bottom: 1rem;
 }
 
 .day-card-image {
@@ -66,14 +66,14 @@
 .day-card-temperature-container {
     display: flex;
     justify-content: center;
-    margin: 1rem 2rem;
+    margin: 1rem 0rem;
 }
 
 .day-card-temperature {
     margin: 0rem 0.5rem ;
 }
 
-.white {
+.white-text {
     color: #E7E7EB;
 }
 

@@ -1,0 +1,5 @@
+.todays-card-list-container {
+    display: grid;
+    gap: 36px 48px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
