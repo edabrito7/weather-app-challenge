@@ -1,0 +1,12 @@
+.main-info-container {
+    background-color: #100E1D;
+    width: 70%;
+    height: 100vh;
+}
+
+.main-info-title {
+    color: #E7E7EB;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 9rem;
+}

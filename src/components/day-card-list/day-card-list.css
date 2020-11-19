@@ -1,0 +1,7 @@
+.day-card-list-container {
+    display: flex;
+    background-color: #100E1D;
+    margin: 8rem 8rem 1rem 8rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
