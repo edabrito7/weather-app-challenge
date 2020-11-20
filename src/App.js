@@ -15,7 +15,7 @@ import useFetch from './services/searchLocation';
 const App = () => {
   const [location, setLocation] = useState('buenos aires')
 
- {/* const { 
+  const { 
     data: searchData,
     loading: searchLoading, 
     error: searchError 
@@ -27,16 +27,16 @@ const App = () => {
     data: locationData,
     loading: locationLoading,
     error: locationError
-  } = useFetch(`${id}`); */}
+  } = useFetch(`${id}`); 
 
 
- // if ( searchLoading || locationLoading ) return <h1>Loading...</h1>
+  if ( searchLoading || locationLoading ) return <Loading/>
 
- // if ( searchError || locationError ) return <h1>Something went wrong..</h1>
+  if ( searchError || locationError ) return <ErrorPage />
 
- // console.log("Location",locationData);
+  console.log("Location",locationData);
   return (
-    <CurrentLocationContext.Provider value={"Buenos Aires"}>
+    <CurrentLocationContext.Provider value={locationData || null}>
       <div className="App">
         <Side/>
         <MainInfo/>
