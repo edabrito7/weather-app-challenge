@@ -1,0 +1,20 @@
+.error-page-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1E213A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text {
+    color: #E7E7EB;
+    text-align: center;    
+}
+
+.text-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+

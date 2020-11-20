@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import './App.css';
 
+import Loading from './components/loading/loading';
+import ErrorPage from './components/error-page/error-page';
 import Side from './components/side/side';
 import MainInfo from './components/main-info/main-info';
 
