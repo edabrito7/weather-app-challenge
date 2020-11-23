@@ -15,7 +15,13 @@ const cardType = (type,value) => {
                 </div>
             )
         case 'wind':
-            return <i className="material-icons md-18 wind-indicator">navigation</i>
+            return (
+                <i 
+                style={{transform: `rotate(${value}deg)`}}
+                className="material-icons md-18 wind-indicator">
+                    navigation
+                </i>
+            )
         default:
             return null
     }

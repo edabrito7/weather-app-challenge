@@ -11,12 +11,13 @@ const InfoSide = () => {
     const location = useContext(CurrentLocationContext);
     if (location === null) return null;
 
+    const {weather_state_name,the_temp} = location.consolidated_weather[0];
     const {title} = location;
     return(
         <>    
             <TopSide/>
-            <h1 className='side-bar-temperature white'>15</h1>
-            <h2 className='side-bar-weather'>Shower</h2>
+            <h1 className='side-bar-temperature white'>{the_temp.toFixed(1)}</h1>
+            <h2 className='side-bar-weather'>{weather_state_name}</h2>
             <div className='date-info-container'>
                 <h3 className='date grey'>Today</h3>
                 <h3 className='date grey'>Fri 5 Jun</h3>
