@@ -11,8 +11,9 @@ const InfoSide = () => {
     const location = useContext(CurrentLocationContext);
     if (location === null) return null;
 
-    const {weather_state_name,the_temp} = location.consolidated_weather[0];
+    const {weather_state_name,the_temp,applicable_date} = location.consolidated_weather[0];
     const {title} = location;
+    const date = new Date(applicable_date);
     return(
         <>    
             <TopSide/>
@@ -20,7 +21,7 @@ const InfoSide = () => {
             <h2 className='side-bar-weather'>{weather_state_name}</h2>
             <div className='date-info-container'>
                 <h3 className='date grey'>Today</h3>
-                <h3 className='date grey'>Fri 5 Jun</h3>
+                <h3 className='date grey'>{date.toGMTString().substring(0, 10)}</h3>
             </div>
             <span className='city grey'>
                 <i className="material-icons md-18">place</i>

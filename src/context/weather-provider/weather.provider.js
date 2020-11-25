@@ -11,7 +11,7 @@ export const weatherApiContext = createContext({
 
 
 const WeatherProvider = ({children}) => {
-    const [currentLocation, setCurrentLocation ] = useState('');
+    const [currentLocation, setCurrentLocation ] = useState('London');
     const [currentLatandLog, setCurrentLatandLog ] = useState(['0','0']);
     const [currentUid, setCurrentUid] = useState('44418');
 

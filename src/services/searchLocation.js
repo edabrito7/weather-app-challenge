@@ -9,11 +9,12 @@ export default function useFetch(query) {
     const [error, setError] = useState(null);
     const prevUrl = useRef();
 
-
+    console.log("Estoy en el useFetch",query)
     useEffect(() => {
-        if (prevUrl.current === query) return;
+        if (query === undefined) return;
+        if (prevUrl.current === query) return;    
         prevUrl.current = query;
-
+        console.log("Segui adelante Fetching",query)
         api.get(query)
         .then(response => {
             if (response.status === 200) return response;

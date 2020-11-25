@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import WeatherProvider from './context/weather-provider/weather.provider';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  
+    <WeatherProvider>
+      <App />
+    </WeatherProvider>,
   document.getElementById('root')
 );
 
