@@ -11,7 +11,6 @@ const PlacesSearchedList = () => {
     const { value } = places;
 
     const PlacesMapping = value.map((place,id) => {
-
         return <PlaceSearchedElement key={id} city={place}/>
     })
     return(

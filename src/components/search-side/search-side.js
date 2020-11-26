@@ -13,8 +13,8 @@ const SearchSide = () => {
 
     const { toggleSearchButton } = useContext(SearchButtonContext);
     return(
-        <SearchProvider>
-            <div className='search-side-container'>
+        
+        <div className='search-side-container'>
             <i 
             onClick={toggleSearchButton}
             className="material-icons md-48 close"
@@ -22,8 +22,8 @@ const SearchSide = () => {
             <InputSearch/>
             <SearchPlace/>
             <PlacesSearchedList/>
-            </div>
-        </SearchProvider>
+        </div>
+     
     )
 }
 

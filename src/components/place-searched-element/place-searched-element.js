@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { weatherApiContext } from '../../context/weather-provider/weather.provider';
 
 import './place-searched-element.css'
 
 const PlaceSearchElement = ({city}) => {
+    const weatherContext = useContext(weatherApiContext);
+    const { changeLocation } = weatherContext;
     return(
-        <li className='place-searched-element-container'>
+        <li 
+        onClick={() => changeLocation(city)}
+        className='place-searched-element-container'
+        >
             <span>{city}</span>
             <i 
             className="material-icons md-18 place-searched-arrow"
