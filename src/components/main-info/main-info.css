@@ -1,7 +1,7 @@
 .main-info-container {
     background-color: #100E1D;
     width: 70%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0rem 8.5rem;
 }
 
@@ -9,4 +9,12 @@
     color: #E7E7EB;
     font-size: 28px;
     font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+    .main-info-container {
+        width: auto;
+        padding: 0rem 2rem 2rem;
+    }
+
 }

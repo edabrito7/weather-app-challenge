@@ -1,7 +1,7 @@
 .side-bar-container {
     width: 30%;
     background-color: #1E213A;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }

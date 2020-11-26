@@ -1,5 +1,14 @@
 .todays-card-list-container {
     display: grid;
-    gap: 36px 48px;
+    gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .todays-card-list-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
 }

@@ -12,6 +12,7 @@ const MainInfo = () => {
             <DayCardList/>
             <h1 className='main-info-title'>Today’s Hightlights</h1>
             <TodaysCardList/>
+
         </div>
     )
 }

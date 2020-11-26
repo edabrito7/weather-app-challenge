@@ -7,6 +7,12 @@
     margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 1024px) {
+    .day-card-container{
+        margin: 0rem 0.5rem 1rem;
+    }
+}
+
 .day-card-image {
     background-repeat: no-repeat;
     background-position: center;

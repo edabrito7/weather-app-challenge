@@ -4,20 +4,24 @@ import SearchButton from '../search-button/search-button';
 
 import './top-side.css';
 
-import useFetch from '../../services/searchLocation';
 import {weatherApiContext} from '../../context/weather-provider/weather.provider';
+
+
+
+
 
 const TopSide = () => {
   const weatherContext = useContext(weatherApiContext);
-  const { changeLocation, changeLatandLog, changeQuery } = weatherContext;
+  const { changeLocation, changeQuery } = weatherContext;
     //const [location, setLocation] = useState([])
 
   const getGeo = () => {
         if ('geolocation' in navigator) {
           navigator.geolocation.getCurrentPosition((position) =>{
             
-            console.log(position.coords.longitude);
+            console.log(position);
             console.log(position.coords.latitude);
+            if(position.coords.accuracy > 200) alert("This could not be as correct as it should")
             changeLocation(`${position.coords.longitude.toString()},${position.coords.latitude.toString()}`);
             changeQuery('search/?lattlong=')
           })
