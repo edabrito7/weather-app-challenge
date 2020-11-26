@@ -3,17 +3,17 @@ import { useState, createContext } from 'react';
 export const weatherApiContext = createContext({
     currentLocation: 'London',
     currentLatandLog: ['0','0'],
-    currentUid: '44418',
+    currentQuery: 'search/?query=',
     changeLocation: () => {},
     changeLatandLog: () => {},
-    changeUid: () => {},
+    changeQuery: () => {},
 });
 
 
 const WeatherProvider = ({children}) => {
     const [currentLocation, setCurrentLocation ] = useState('London');
     const [currentLatandLog, setCurrentLatandLog ] = useState(['0','0']);
-    const [currentUid, setCurrentUid] = useState('44418');
+    const [currentQuery, setCurrentQuery] = useState('search/?query=');
 
     const changeLocation = (newLocation) => {
         setCurrentLocation(newLocation);
@@ -23,8 +23,8 @@ const WeatherProvider = ({children}) => {
         setCurrentLatandLog(newLatandLog);
     };
 
-    const changeUid = (newUid) => {
-        setCurrentUid(newUid);
+    const changeQuery = (newQuery) => {
+        setCurrentQuery(newQuery);
     };
 
     return(
@@ -32,10 +32,10 @@ const WeatherProvider = ({children}) => {
         value={{
             currentLocation,
             currentLatandLog,
-            currentUid,
+            currentQuery,
             changeLocation,
             changeLatandLog,
-            changeUid
+            changeQuery
         }}
         >
             {children}

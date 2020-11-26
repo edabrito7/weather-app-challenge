@@ -15,15 +15,13 @@ import useFetch from './services/searchLocation';
 
 const App = () => {
   const weatherApi = useContext(weatherApiContext);
-  const { currentLocation } = weatherApi;
-
-
+  const { currentLocation, currentLatandLog, currentQuery } = weatherApi;
 
   const { 
     data: searchData,
     loading: searchLoading, 
     error: searchError 
-    } = useFetch(`search/?query=${currentLocation}`);
+    } = useFetch(`${currentQuery}${currentLocation}`);
   
   const id = searchData?.woeid?.toString();
   const {

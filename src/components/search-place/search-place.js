@@ -10,10 +10,10 @@ const SearchPlace = () => {
     const weatherContext = useContext(weatherApiContext);
     
     const { add, currentCity } = placesSearched; 
-    const { changeLocation } = weatherContext;
+    const { changeLocation, changeQuery } = weatherContext;
     const Actions = () => {
-        console.log("New location button");
         add(currentCity);
+        changeQuery('search/?query=');
         changeLocation(currentCity);
     }
     return(

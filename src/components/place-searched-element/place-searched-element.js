@@ -6,10 +6,15 @@ import './place-searched-element.css'
 
 const PlaceSearchElement = ({city}) => {
     const weatherContext = useContext(weatherApiContext);
-    const { changeLocation } = weatherContext;
+    const { changeLocation, changeQuery } = weatherContext;
+
+    const RequestNewWeather = () => {
+        changeQuery('search/?query=');
+        changeLocation(city);
+    }
     return(
         <li 
-        onClick={() => changeLocation(city)}
+        onClick={RequestNewWeather}
         className='place-searched-element-container'
         >
             <span>{city}</span>

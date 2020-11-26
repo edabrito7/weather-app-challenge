@@ -1,30 +1,31 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 
 import SearchButton from '../search-button/search-button';
 
 import './top-side.css';
 
 import useFetch from '../../services/searchLocation';
+import {weatherApiContext} from '../../context/weather-provider/weather.provider';
 
 const TopSide = () => {
-    const [location, setLocation] = useState([])
+  const weatherContext = useContext(weatherApiContext);
+  const { changeLocation, changeLatandLog, changeQuery } = weatherContext;
+    //const [location, setLocation] = useState([])
 
-    //const { data, loading, error} = useFetch(`search/?lattlong=${location[0]},${location[1]}`);
-    const getGeo = () => {
+  const getGeo = () => {
         if ('geolocation' in navigator) {
           navigator.geolocation.getCurrentPosition((position) =>{
             
             console.log(position.coords.longitude);
             console.log(position.coords.latitude);
-            setLocation([position.coords.latitude,position.coords.longitude])
-            //setLocation([48.85341,2.3488])
-            
+            changeLocation(`${position.coords.longitude.toString()},${position.coords.latitude.toString()}`);
+            changeQuery('search/?lattlong=')
           })
         }
       }
 
 
-    return(
+  return(
         <div className='top-side-container'>
             <SearchButton/>
             <div 
