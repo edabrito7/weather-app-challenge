@@ -12,10 +12,11 @@ const DayCardList = () => {
 
     const {consolidated_weather} = location;
 
-    const NextDays = consolidated_weather.slice(1).map(({min_temp,max_temp,weather_state_abbr, applicable_date}) => {
+    const NextDays = consolidated_weather.slice(1).map(({min_temp,max_temp,weather_state_abbr, applicable_date}, key) => {
         const date = new Date(applicable_date);
         return(
             <DayCard
+            key={key}
             date={date.toGMTString().substring(0, 10)}
             lowerTemperature={min_temp.toFixed(1)}
             higherTemperature={max_temp.toFixed(1)}
