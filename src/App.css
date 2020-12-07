@@ -5,6 +5,48 @@
 
 }
 
+
+
+.s {
+  background-image: url('./assets/weather-pitures/Shower.png');
+}
+
+.c {
+  background-image: url('./assets/weather-pitures/Clear.png');
+}
+
+.sn {
+  background-image: url('./assets/weather-pitures/Snow.png');
+}
+
+.t {
+  background-image: url('./assets/weather-pitures/Thunderstorm.png');
+}
+
+.sl {
+  background-image: url('./assets/weather-pitures/Sleet.png');
+}
+
+.h {
+  background-image: url('./assets/weather-pitures/Hail.png');
+}
+
+.hr {
+  background-image: url('./assets/weather-pitures/HeavyRain.png');
+}
+
+.lr {
+  background-image: url('./assets/weather-pitures/LightRain.png');
+}
+
+.hc {
+  background-image: url('./assets/weather-pitures/HeavyCloud.png');
+}
+
+.lc {
+  background-image: url('./assets/weather-pitures/LightCloud.png');
+}
+
 @media screen and (max-width: 1024px) {
   .App {
     flex-direction: column;

@@ -33,3 +33,16 @@
 .top-side-button {
     color: white;
 }
+
+
+.picture {
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    margin-left: -100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 200px;
+    height: 234px;
+}

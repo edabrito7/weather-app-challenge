@@ -5,7 +5,7 @@ import SearchButton from '../search-button/search-button';
 import './top-side.css';
 
 import {weatherApiContext} from '../../context/weather-provider/weather.provider';
-
+import CurrentLocationContext from '../../context/current-location/current-location.context';
 
 
 
@@ -13,6 +13,9 @@ import {weatherApiContext} from '../../context/weather-provider/weather.provider
 const TopSide = () => {
   const weatherContext = useContext(weatherApiContext);
   const { changeLocation, changeQuery } = weatherContext;
+  const location = useContext(CurrentLocationContext);
+  const { consolidated_weather } = location;
+  const icon = consolidated_weather[0].weather_state_abbr;
     //const [location, setLocation] = useState([])
 
   const getGeo = () => {
@@ -38,6 +41,7 @@ const TopSide = () => {
             >
                 <i className="material-icons md-18 white">my_location</i>   
             </div>
+            <div className={`picture ${icon}`} alt="today's weather icon"/>
             <div className='top-side-background'/>
         </div>
         
