@@ -49,10 +49,19 @@
     border-radius: 80px;
 }
 
+.windy {
+    align-self: center;
+}
 
 .wind-indicator {
     border-radius: 50%;
     background-color: #E7E7EB;
     padding: 8px;
-    align-self: center;
+}
+
+.windy-compass {
+    color: #E7E7EB;
+    padding-left: 0.75rem;
+    font-weight: 500;
+    font-size: 0.8rem;
 }

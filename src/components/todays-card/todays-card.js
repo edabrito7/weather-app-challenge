@@ -2,7 +2,7 @@ import React from 'react';
 
 import './todays-card.css';
 
-const cardType = (type,value) => {
+const cardType = (type,value,windy) => {
     switch(type) {
         case 'humidity':
             return (
@@ -16,11 +16,14 @@ const cardType = (type,value) => {
             )
         case 'wind':
             return (
+                <div className='windy'>
                 <i 
                 style={{transform: `rotate(${value}deg)`}}
                 className="material-icons md-18 wind-indicator">
                     navigation
                 </i>
+                <span className='windy-compass'>{windy}</span>
+                </div>
             )
         default:
             return null
@@ -29,7 +32,7 @@ const cardType = (type,value) => {
 
 
 
-const TodaysCard = ({title, type, units, value, size}) => {
+const TodaysCard = ({title, type, units, value, size, windy}) => {
     return(
         <div className={`todays-card-container ${size}`}>
             <h1 className='todays-card-title white'>
@@ -38,7 +41,7 @@ const TodaysCard = ({title, type, units, value, size}) => {
             <p className='todays-card-value white'>
                 {value} {units}
             </p>
-            {cardType(type,value)}
+            {cardType(type,value, windy)}
         </div>
     )
 }

@@ -21,9 +21,10 @@ const TodaysCardList = () => {
             <TodaysCard
             title='Wind Status'
             type='wind'
-            units={wind_direction_compass}
+            units='mph'
             value={wind_direction.toFixed(2)}
             size='large'
+            windy={wind_direction_compass}
             />
             <TodaysCard
             title='Humidity'
