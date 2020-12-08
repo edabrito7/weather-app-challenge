@@ -6,7 +6,7 @@ const cardType = (type,value,windy) => {
     switch(type) {
         case 'humidity':
             return (
-                <div className='humidity-indicator white'>
+                <div className='humidity-indicator white-cards'>
                     <div 
                     className='humidity-value'
                     style={{width: `${value}%`}}
@@ -35,10 +35,10 @@ const cardType = (type,value,windy) => {
 const TodaysCard = ({title, type, units, value, size, windy}) => {
     return(
         <div className={`todays-card-container ${size}`}>
-            <h1 className='todays-card-title white'>
+            <h1 className='todays-card-title white-cards'>
                 {title}
             </h1>
-            <p className='todays-card-value white'>
+            <p className='todays-card-value white-cards'>
                 {value} {units}
             </p>
             {cardType(type,value, windy)}
