@@ -5,6 +5,12 @@
     padding: 0rem 8.5rem;
 }
 
+.main-temperature-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
 .main-info-title {
     color: #E7E7EB;
     font-size: 28px;

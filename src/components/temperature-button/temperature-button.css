@@ -1,0 +1,11 @@
+.button-temperature {
+    background: #E7E7EB;
+    border: 0px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: #110E3C;
+}
