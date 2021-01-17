@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import './temperature-button.css';
 
+import { weatherApiContext } from '../../context/weather-provider/weather.provider';
 
-const TemperatureButton = ({type}) => {
+const TemperatureButton = ({type, toValue, ...otherProps}) => {
+    const weatherApi = useContext(weatherApiContext);
+
+    const { changeUnit, unit } = weatherApi;
+    const color = unit===toValue ? "light" : "dark";
     return(
-        <button className='button-temperature'>
+        <button 
+        onClick={() => changeUnit(toValue)}
+        className={`button-temperature ${color} `}>
             {type}
         </button>
     )

@@ -30,7 +30,6 @@ const App = () => {
     error: locationError
   } = useFetch(id); 
 
-  console.log(searchError);
   if ( searchLoading || locationLoading ) return <Loading/>
 
   if ( searchError || locationError ) return <ErrorPage />

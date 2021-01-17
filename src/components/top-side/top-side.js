@@ -28,8 +28,6 @@ const TopSide = () => {
         if ('geolocation' in navigator) {
           navigator.geolocation.getCurrentPosition((position) =>{
             
-            console.log(position);
-            console.log(position.coords.latitude);
             if(position.coords.accuracy > 200) return setisOpen(true)
             changeLocation(`${position.coords.longitude.toString()},${position.coords.latitude.toString()}`);
             changeQuery('search/?lattlong=')

@@ -7,6 +7,8 @@ export const weatherApiContext = createContext({
     changeLocation: () => {},
     changeLatandLog: () => {},
     changeQuery: () => {},
+    unit: true,
+    changeUnit: () => {},
 });
 
 
@@ -14,6 +16,7 @@ const WeatherProvider = ({children}) => {
     const [currentLocation, setCurrentLocation ] = useState('London');
     const [currentLatandLog, setCurrentLatandLog ] = useState(['0','0']);
     const [currentQuery, setCurrentQuery] = useState('search/?query=');
+    const [unit, setUnit ] = useState(true);
 
     const changeLocation = (newLocation) => {
         setCurrentLocation(newLocation);
@@ -27,6 +30,9 @@ const WeatherProvider = ({children}) => {
         setCurrentQuery(newQuery);
     };
 
+    const changeUnit = (value) => {
+        setUnit(value);
+    }
     return(
         <weatherApiContext.Provider
         value={{
@@ -35,7 +41,9 @@ const WeatherProvider = ({children}) => {
             currentQuery,
             changeLocation,
             changeLatandLog,
-            changeQuery
+            changeQuery,
+            unit,
+            changeUnit
         }}
         >
             {children}

@@ -11,7 +11,7 @@ import SearchButtonContext from '../../context/search/search-button.context';
 const Side = () => {
     const [searchPlace, setSearchPlace] = useState(false);
     const toggleSearchButton = () => setSearchPlace(!searchPlace);
-    console.log(searchPlace);
+    
     return(
         <SearchProvider>
             <div className='side-bar-container'>

@@ -7,11 +7,12 @@ import TodaysCardList from '../todays-card-list/todays-card-list';
 import './main-info.css';
 
 const MainInfo = () => {
+
     return(
         <div className='main-info-container'>
             <div className='main-temperature-icons'>
-                <TemperatureButton type='°C'/>
-                <TemperatureButton type='°F'/>
+                <TemperatureButton toValue={true} type='°C'/>
+                <TemperatureButton toValue={false} type='°F'/>
             </div>
             <DayCardList/>
             <h1 className='main-info-title'>Today’s Hightlights</h1>
