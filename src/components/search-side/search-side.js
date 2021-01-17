@@ -1,7 +1,6 @@
-import React, {  useState, useContext } from 'react';
+import React, { useContext } from 'react';
 
 import SearchButtonContext from '../../context/search/search-button.context';
-import SearchProvider from '../../context/places-searched/places-searched.provider';
 
 import InputSearch from '../input-search/input-search';
 import SearchPlace from '../search-place/search-place';
