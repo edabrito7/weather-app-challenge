@@ -15,7 +15,7 @@ import useFetch from './services/searchLocation';
 
 const App = () => {
   const weatherApi = useContext(weatherApiContext);
-  const { currentLocation, currentLatandLog, currentQuery } = weatherApi;
+  const { currentLocation,  currentQuery } = weatherApi;
 
   const { 
     data: searchData,
