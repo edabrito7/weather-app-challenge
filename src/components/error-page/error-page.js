@@ -8,12 +8,12 @@ const ErrorPage = () => {
         <div className='error-page-container'>
             <h1 className='text'>Sorry something went wrong...</h1>
             <h2 className='text'>It is me.. not you</h2>
-            <a 
+            <button 
             className='text text-link'
             onClick={() => window.location.reload() }
             >
                 let's try again
-            </a>
+            </button>
         </div>
     )
 }
