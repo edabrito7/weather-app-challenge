@@ -12,13 +12,13 @@ const DayCardList = () => {
     const location = useContext(CurrentLocationContext);
     const weatherApi = useContext(weatherApiContext);
     const {consolidated_weather} = location;
-    const isCelcius = weatherApi.unit;
+    const { isCelcius } = weatherApi;
 
-    const NextDays = consolidated_weather.slice(1).map(({min_temp,max_temp,weather_state_abbr, applicable_date}, key) => {
+    const NextDays = consolidated_weather.slice(1).map(({min_temp,max_temp,weather_state_abbr, applicable_date, id}, key) => {
         const date = new Date(applicable_date);
         return(
             <DayCard
-            key={key}
+            key={id}
             date={date.toGMTString().substring(0, 10)}
             lowerTemperature={isCelcius ? min_temp.toFixed(1) : ToFarenheit(min_temp.toFixed(1))}
             higherTemperature={isCelcius ? max_temp.toFixed(1): ToFarenheit(max_temp.toFixed(1))}

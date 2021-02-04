@@ -14,7 +14,7 @@ const InfoSide = () => {
     const location = useContext(CurrentLocationContext);
     const weatherApi = useContext(weatherApiContext);
 
-    const isCelcius = weatherApi.unit;
+    const { isCelcius } = weatherApi;
     if (location === null) return null;
 
     const {weather_state_name,the_temp,applicable_date} = location.consolidated_weather[0];

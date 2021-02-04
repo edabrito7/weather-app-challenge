@@ -6,7 +6,7 @@ import './day-card.css';
 
 const DayCard = ({date, lowerTemperature, higherTemperature, icon}) => {
     const weatherApi = useContext(weatherApiContext);
-    const isCelcius = weatherApi.unit;
+    const {isCelcius } = weatherApi;
     
     return(
         <div className='day-card-container'>

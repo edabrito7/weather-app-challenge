@@ -7,11 +7,11 @@ import { weatherApiContext } from '../../context/weather-provider/weather.provid
 const TemperatureButton = ({type, toValue, ...otherProps}) => {
     const weatherApi = useContext(weatherApiContext);
 
-    const { changeUnit, unit } = weatherApi;
-    const color = unit===toValue ? "light" : "dark";
+    const { changeisCelcius, isCelcius } = weatherApi;
+    const color = isCelcius === toValue ? "light" : "dark";
     return(
         <button 
-        onClick={() => changeUnit(toValue)}
+        onClick={() => changeisCelcius(toValue)}
         className={`button-temperature ${color} `}>
             {type}
         </button>
